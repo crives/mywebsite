@@ -1,0 +1,24 @@
+ <!-- <nav role='navigation'>
+  <a data-page="home" class="active" href="#">Home</a>
+  <a data-page="about" href="#">About</a>
+  <a data-page="clients" href="#">Clients</a>
+  <a data-page="contact" href="#">Contact Us</a>
+</nav>   -->
+
+
+<div class="intro">Hi, I'm</div>
+  
+<div class="name">Caroline Rives</div>
+
+<div class="menu-trigger" (click)="isOpen = !isOpen">
+  <i class="gg-push-chevron-right-o"></i>
+</div>
+
+<div class="side-menu" *ngIf="isOpen" [@sideMenu]>
+  <div class="menu-close" (click)="isOpen = !isOpen">
+    <i class="gg-push-chevron-left-o"></i>
+  </div>
+  <div class="menu-item" *ngFor="let item of [1, 2, 3, 4, 5]; let i = index">
+    Menu Item {{ i }}
+  </div>
+</div>
